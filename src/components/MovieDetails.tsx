@@ -60,7 +60,7 @@ export default function MovieDetails({
       async function getMovieDetails() {
         setMovie(null);
         const res = await fetch(
-          `http://www.omdbapi.com?apikey=${KEY}&i=${selectedId}`
+          `https://www.omdbapi.com?apikey=${KEY}&i=${selectedId}`
         );
         const data: MovieData = await res.json();
         data.imdbRating = Number(data.imdbRating);
